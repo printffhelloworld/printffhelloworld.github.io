@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Chen&#39;s blogs</title>
+  <title>如何在list顺序不变的条件下执行去重操作 | Chen&#39;s blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Chen&#39;s blogs">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="初始化一个list，并赋给它一些重复的值。把列表转换成set类型，再转换成list,完成去重操作。打印结果 。 123a &#x3D; [&#39;a&#39;, &#39;b&#39;, &#39;b&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;a&#39;]a1 &#x3D; list(set(a))print(a1)  运行一下。呦呵，输出了：[&#39;b&#39;, &#39;c&#39;, &#39;a&#39;, &#39;d&#39;]。再运行一下。啊哈">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何在list顺序不变的条件下执行去重操作">
+<meta property="og:url" content="http://yoursite.com/2020/04/21/%E5%A6%82%E4%BD%95%E5%9C%A8list%E9%A1%BA%E5%BA%8F%E4%B8%8D%E5%8F%98%E7%9A%84%E6%9D%A1%E4%BB%B6%E4%B8%8B%E6%89%A7%E8%A1%8C%E5%8E%BB%E9%87%8D%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="Chen&#39;s blogs">
+<meta property="og:description" content="初始化一个list，并赋给它一些重复的值。把列表转换成set类型，再转换成list,完成去重操作。打印结果 。 123a &#x3D; [&#39;a&#39;, &#39;b&#39;, &#39;b&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;a&#39;]a1 &#x3D; list(set(a))print(a1)  运行一下。呦呵，输出了：[&#39;b&#39;, &#39;c&#39;, &#39;a&#39;, &#39;d&#39;]。再运行一下。啊哈">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-21T13:50:12.075Z">
+<meta property="article:modified_time" content="2020-04-21T14:46:00.659Z">
 <meta property="article:author" content="Little Chen">
 <meta name="twitter:card" content="summary">
   
@@ -153,16 +157,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-如何在list顺序不变的条件下执行去重操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-如何在list顺序不变的条件下执行去重操作" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/21/%E5%A6%82%E4%BD%95%E5%9C%A8list%E9%A1%BA%E5%BA%8F%E4%B8%8D%E5%8F%98%E7%9A%84%E6%9D%A1%E4%BB%B6%E4%B8%8B%E6%89%A7%E8%A1%8C%E5%8E%BB%E9%87%8D%E6%93%8D%E4%BD%9C/">如何在list顺序不变的条件下执行去重操作</a>
+    <h1 class="article-title" itemprop="name">
+      如何在list顺序不变的条件下执行去重操作
     </h1>
   
 
@@ -173,6 +175,10 @@
         
     
     
+        
+          <span class="archive-article-date">
+              阅读量 <span id="busuanzi_value_page_pv"></span>
+          </span>
         
     
     
@@ -197,6 +203,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -204,16 +231,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/21/%E5%A6%82%E4%BD%95%E5%9C%A8list%E9%A1%BA%E5%BA%8F%E4%B8%8D%E5%8F%98%E7%9A%84%E6%9D%A1%E4%BB%B6%E4%B8%8B%E6%89%A7%E8%A1%8C%E5%8E%BB%E9%87%8D%E6%93%8D%E4%BD%9C/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/21/%E5%A6%82%E4%BD%95%E5%9C%A8list%E9%A1%BA%E5%BA%8F%E4%B8%8D%E5%8F%98%E7%9A%84%E6%9D%A1%E4%BB%B6%E4%B8%8B%E6%89%A7%E8%A1%8C%E5%8E%BB%E9%87%8D%E6%93%8D%E4%BD%9C/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/20/Python3%E4%B8%ADif%20__name__%20==%20'__main__'%E5%88%B0%E5%BA%95%E6%98%AF%E4%B8%AA%E5%95%A5%E7%8E%A9%E6%84%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python3中if __name__ == &#39;__main__&#39;到底是个啥玩意</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -233,154 +319,34 @@
 
 
 
-
   
-    <article id="post-Python3中if __name__ == &#39;__main__&#39;到底是个啥玩意" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/20/Python3%E4%B8%ADif%20__name__%20==%20'__main__'%E5%88%B0%E5%BA%95%E6%98%AF%E4%B8%AA%E5%95%A5%E7%8E%A9%E6%84%8F/">Python3中if __name__ == &#39;__main__&#39;到底是个啥玩意</a>
-    </h1>
   
 
-        
-        <a href="/2020/04/20/Python3%E4%B8%ADif%20__name__%20==%20'__main__'%E5%88%B0%E5%BA%95%E6%98%AF%E4%B8%AA%E5%95%A5%E7%8E%A9%E6%84%8F/" class="archive-article-date">
-  	<time datetime="2020-04-20T13:07:45.042Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-20</time>
-</a>
-        
-    
-    
-        
-    
-    
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<h4 id="一、首先创建一个a文件"><a href="#一、首先创建一个a文件" class="headerlink" title="一、首先创建一个a文件"></a>一、首先创建一个a文件</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'a'</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    print(a)</span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
-
-<h5 id="运行一下，哈哈，输出了-a"><a href="#运行一下，哈哈，输出了-a" class="headerlink" title="运行一下，哈哈，输出了:a"></a>运行一下，哈哈，输出了:<code>a</code></h5><h4 id="二、然后创建一个b文件"><a href="#二、然后创建一个b文件" class="headerlink" title="二、然后创建一个b文件"></a>二、然后创建一个b文件</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">b = <span class="string">'b'</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    print(b)</span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
-
-<h5 id="运行一下，哈哈，又输出了-b"><a href="#运行一下，哈哈，又输出了-b" class="headerlink" title="运行一下，哈哈，又输出了: b"></a>运行一下，哈哈，又输出了: <code>b</code></h5><h4 id="三、现在在b文件中引入a文件"><a href="#三、现在在b文件中引入a文件" class="headerlink" title="三、现在在b文件中引入a文件"></a>三、现在在b文件中引入a文件</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Qizi.a</span><br><span class="line">b = <span class="string">'b'</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    print(b)</span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
-
-<h5 id="运行一下，呦呵，输出了：a和b。那么问题来了，我也没调用a的main（）函数，它咋自动执行了捏？ミﾟДﾟ彡"><a href="#运行一下，呦呵，输出了：a和b。那么问题来了，我也没调用a的main（）函数，它咋自动执行了捏？ミﾟДﾟ彡" class="headerlink" title="运行一下，呦呵，输出了：a和b。那么问题来了，我也没调用a的main（）函数，它咋自动执行了捏？ミﾟДﾟ彡"></a>运行一下，呦呵，输出了：<code>a</code>和<code>b</code>。那么问题来了，我也没调用a的main（）函数，它咋自动执行了捏？ミﾟДﾟ彡</h5><h4 id="四、现在我们把a文件的main-函数放到if什么-那么-等于-什么-39-梅因-39-判断下"><a href="#四、现在我们把a文件的main-函数放到if什么-那么-等于-什么-39-梅因-39-判断下" class="headerlink" title="四、现在我们把a文件的main()函数放到if什么 __那么__ 等于 什么&#39;__梅因__&#39;判断下"></a>四、现在我们把a文件的main()函数放到<code>if什么 __那么__ 等于 什么&#39;__梅因__&#39;</code>判断下</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'a'</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    print(a)</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-
-<h4 id="这回我们再返回去运行一下b文件。呦呵，只输出了b。舒服了。"><a href="#这回我们再返回去运行一下b文件。呦呵，只输出了b。舒服了。" class="headerlink" title="这回我们再返回去运行一下b文件。呦呵，只输出了b。舒服了。"></a>这回我们再返回去运行一下b文件。呦呵，只输出了<code>b</code>。舒服了。</h4><h4 id="五、所以，这个if什么-那么-等于-什么-39-梅因-39-可以保证脚本在以模块导入的时候，不会自动执行最外层——函数定义以外的代码。"><a href="#五、所以，这个if什么-那么-等于-什么-39-梅因-39-可以保证脚本在以模块导入的时候，不会自动执行最外层——函数定义以外的代码。" class="headerlink" title="五、所以，这个if什么 __那么__ 等于 什么&#39;__梅因__&#39;可以保证脚本在以模块导入的时候，不会自动执行最外层——函数定义以外的代码。"></a>五、所以，这个<code>if什么 __那么__ 等于 什么&#39;__梅因__&#39;</code>可以保证脚本在以模块导入的时候，不会自动执行最外层——函数定义以外的代码。</h4><hr>
- <center>٩( 'ω' )و get！</center>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/20/Python3%E4%B8%ADif%20__name__%20==%20'__main__'%E5%88%B0%E5%BA%95%E6%98%AF%E4%B8%AA%E5%95%A5%E7%8E%A9%E6%84%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/19/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-    </h1>
   
 
-        
-        <a href="/2020/04/19/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-04-19T09:27:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-19</time>
-</a>
-        
-    
-    
-        
-    
-    
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>2020年4月9日，天气晴，心情愉悦。<br>虽然今天是周日，但外面建房子的仍然在上班。大清早开始就叮叮DuangDuang吵个不停。emmm，词穷编不下去了。反正就是本来很烦，但是我建好了我的个人博客，整个人又开心了。嗯。现在还只是再本地，待会看看怎么弄到公网上然后装个逼。真实充实而美好的一天啊。END。</p>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>Nothing</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/19/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+  
+      <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: 'your clientID',
+  clientSecret: 'your clientSecret',
+  repo: 'git_comment',
+  owner: 'findtheonlyway',
+  admin: ['erbiduo'],
+  id: md5(window.location.pathname),
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+</script>
   
 
 
@@ -431,8 +397,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
