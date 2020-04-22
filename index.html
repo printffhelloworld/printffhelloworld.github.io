@@ -155,6 +155,101 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-匿名函数lambda的用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/22/%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0lambda%E7%9A%84%E7%94%A8%E6%B3%95/">匿名函数lambda的用法</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/22/%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0lambda%E7%9A%84%E7%94%A8%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-04-22T13:04:35.575Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-22</time>
+</a>
+        
+    
+    
+        
+    
+    
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>lambda是python中的保留关键字，可以通过一行代码定义匿名函数。基本结构是：<code>lambda argument_list:expression</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="keyword">lambda</span> x: x ** <span class="number">2</span>  <span class="comment"># 创建一个变量a=lambda 参数为x 表达式为x的2次方</span></span><br><span class="line">print(a(<span class="number">2</span>))           <span class="comment"># 给a函数传入实参2</span></span><br></pre></td></tr></table></figure>
+
+<p>运行一下。呦呵，输出了:<code>4。</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建一个变量b=lambda 参数为x和y 表达式为如果x大于y结果为x，否则为y</span></span><br><span class="line">b = <span class="keyword">lambda</span> x, y: x <span class="keyword">if</span> x &gt; y <span class="keyword">else</span> y</span><br><span class="line"><span class="comment"># 给b函数传入实参1和2</span></span><br><span class="line">print(b(<span class="number">1</span>, <span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+
+<p>运行一下。呦呵，输出了较大的:<code>2</code>。</p>
+<p>此外，lambda还可以放入有序列表中。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建一个有序列表a_list赋给它两个lambda匿名函数，一个用于去除多余空格，一个用于乘方运算</span></span><br><span class="line">a_list = [<span class="keyword">lambda</span> x: x.strip(), <span class="keyword">lambda</span> x: x ** <span class="number">2</span>]</span><br><span class="line">print(a_list)</span><br></pre></td></tr></table></figure>
+
+<p>运行一下。输出了：<code>[&lt;function &lt;lambda&gt; at 0x000001D98E38FE18&gt;, &lt;function &lt;lambda&gt; at 0x000001D98E38FEA0&gt;]</code>。可见两个元素都是lambda匿名函数。</p>
+<p>调用这两个函数只需要按照索引传入实参即可。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建一个有序列表a_list赋给它两个lambda匿名函数，一个用于去除多余空格，一个用于乘方运算</span></span><br><span class="line">a_list = [<span class="keyword">lambda</span> x: x.strip(), <span class="keyword">lambda</span> x: x ** <span class="number">2</span>]</span><br><span class="line">print(a_list)</span><br><span class="line"><span class="comment">#给第一个函数传入实参giao空格空格空格空格</span></span><br><span class="line">print(a_list[<span class="number">0</span>](<span class="string">"giao     "</span>))</span><br><span class="line"><span class="comment">#给第二个函数传入实参3</span></span><br><span class="line">print(a_list[<span class="number">1</span>](<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+
+<p>运行一下。正确输出了结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[&lt;function &lt;<span class="keyword">lambda</span>&gt; at <span class="number">0x00000261D659FEA0</span>&gt;, &lt;function &lt;<span class="keyword">lambda</span>&gt; at <span class="number">0x00000261D659FF28</span>&gt;]</span><br><span class="line">giao</span><br><span class="line"><span class="number">9</span></span><br></pre></td></tr></table></figure>
+
+<p>最后，lambda还可以作为函数返回值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义一个main函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 返回由lambda定义的乘方函数</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">lambda</span> x: x ** <span class="number">2</span></span><br><span class="line"><span class="comment">#打印main函数的返回值</span></span><br><span class="line">print(main())</span><br></pre></td></tr></table></figure>
+
+<p>运行一下。结果返回一个函数指针:<code>&lt;function main.&lt;locals&gt;.&lt;lambda&gt; at 0x0000020D3B0A5048&gt;</code>。给这个指针传入实参4。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义一个main函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 返回由lambda定义的乘方函数</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">lambda</span> x: x ** <span class="number">2</span></span><br><span class="line">print(main())</span><br><span class="line">print(main()(<span class="number">4</span>))</span><br></pre></td></tr></table></figure>
+
+<p>运行一下。哈哈，输出了:<code>16</code>。</p>
+<hr>
+ <center>٩( 'ω' )و get！</center>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/22/%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0lambda%E7%9A%84%E7%94%A8%E6%B3%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-如何在list顺序不变的条件下执行去重操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

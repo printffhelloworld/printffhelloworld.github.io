@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | Chen&#39;s blogs</title>
+  <title>匿名函数lambda的用法 | Chen&#39;s blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Chen&#39;s blogs">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="lambda是python中的保留关键字，可以通过一行代码定义匿名函数。基本结构是：lambda argument_list:expression 12a &#x3D; lambda x: x ** 2  # 创建一个变量a&#x3D;lambda 参数为x 表达式为x的2次方print(a(2))           # 给a函数传入实参2  运行一下。呦呵，输出了:4。 1234# 创建一个变量b&#x3D;lambda">
+<meta property="og:type" content="article">
+<meta property="og:title" content="匿名函数lambda的用法">
+<meta property="og:url" content="http://yoursite.com/2020/04/22/%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0lambda%E7%9A%84%E7%94%A8%E6%B3%95/index.html">
 <meta property="og:site_name" content="Chen&#39;s blogs">
+<meta property="og:description" content="lambda是python中的保留关键字，可以通过一行代码定义匿名函数。基本结构是：lambda argument_list:expression 12a &#x3D; lambda x: x ** 2  # 创建一个变量a&#x3D;lambda 参数为x 表达式为x的2次方print(a(2))           # 给a函数传入实参2  运行一下。呦呵，输出了:4。 1234# 创建一个变量b&#x3D;lambda">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-22T13:04:35.575Z">
+<meta property="article:modified_time" content="2020-04-22T13:41:37.470Z">
 <meta property="article:author" content="Little Chen">
 <meta name="twitter:card" content="summary">
   
@@ -153,130 +157,212 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-匿名函数lambda的用法" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      匿名函数lambda的用法
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/22/%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0lambda%E7%9A%84%E7%94%A8%E6%B3%95/" class="archive-article-date">
+
+        
+        <a href="/2020/04/22/%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0lambda%E7%9A%84%E7%94%A8%E6%B3%95/" class="archive-article-date">
   	<time datetime="2020-04-22T13:04:35.575Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-22</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/22/%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0lambda%E7%9A%84%E7%94%A8%E6%B3%95/">匿名函数lambda的用法</a>
-    </h1>
-  
+        
+    
+    
+        
+          <span class="archive-article-date">
+              阅读量 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
+    
+    
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>lambda是python中的保留关键字，可以通过一行代码定义匿名函数。基本结构是：<code>lambda argument_list:expression</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="keyword">lambda</span> x: x ** <span class="number">2</span>  <span class="comment"># 创建一个变量a=lambda 参数为x 表达式为x的2次方</span></span><br><span class="line">print(a(<span class="number">2</span>))           <span class="comment"># 给a函数传入实参2</span></span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<p>运行一下。呦呵，输出了:<code>4。</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建一个变量b=lambda 参数为x和y 表达式为如果x大于y结果为x，否则为y</span></span><br><span class="line">b = <span class="keyword">lambda</span> x, y: x <span class="keyword">if</span> x &gt; y <span class="keyword">else</span> y</span><br><span class="line"><span class="comment"># 给b函数传入实参1和2</span></span><br><span class="line">print(b(<span class="number">1</span>, <span class="number">2</span>))</span><br></pre></td></tr></table></figure>
 
+<p>运行一下。呦呵，输出了较大的:<code>2</code>。</p>
+<p>此外，lambda还可以放入有序列表中。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建一个有序列表a_list赋给它两个lambda匿名函数，一个用于去除多余空格，一个用于乘方运算</span></span><br><span class="line">a_list = [<span class="keyword">lambda</span> x: x.strip(), <span class="keyword">lambda</span> x: x ** <span class="number">2</span>]</span><br><span class="line">print(a_list)</span><br></pre></td></tr></table></figure>
+
+<p>运行一下。输出了：<code>[&lt;function &lt;lambda&gt; at 0x000001D98E38FE18&gt;, &lt;function &lt;lambda&gt; at 0x000001D98E38FEA0&gt;]</code>。可见两个元素都是lambda匿名函数。</p>
+<p>调用这两个函数只需要按照索引传入实参即可。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建一个有序列表a_list赋给它两个lambda匿名函数，一个用于去除多余空格，一个用于乘方运算</span></span><br><span class="line">a_list = [<span class="keyword">lambda</span> x: x.strip(), <span class="keyword">lambda</span> x: x ** <span class="number">2</span>]</span><br><span class="line">print(a_list)</span><br><span class="line"><span class="comment">#给第一个函数传入实参giao空格空格空格空格</span></span><br><span class="line">print(a_list[<span class="number">0</span>](<span class="string">"giao     "</span>))</span><br><span class="line"><span class="comment">#给第二个函数传入实参3</span></span><br><span class="line">print(a_list[<span class="number">1</span>](<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+
+<p>运行一下。正确输出了结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[&lt;function &lt;<span class="keyword">lambda</span>&gt; at <span class="number">0x00000261D659FEA0</span>&gt;, &lt;function &lt;<span class="keyword">lambda</span>&gt; at <span class="number">0x00000261D659FF28</span>&gt;]</span><br><span class="line">giao</span><br><span class="line"><span class="number">9</span></span><br></pre></td></tr></table></figure>
+
+<p>最后，lambda还可以作为函数返回值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义一个main函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 返回由lambda定义的乘方函数</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">lambda</span> x: x ** <span class="number">2</span></span><br><span class="line"><span class="comment">#打印main函数的返回值</span></span><br><span class="line">print(main())</span><br></pre></td></tr></table></figure>
+
+<p>运行一下。结果返回一个函数指针:<code>&lt;function main.&lt;locals&gt;.&lt;lambda&gt; at 0x0000020D3B0A5048&gt;</code>。给这个指针传入实参4。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义一个main函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 返回由lambda定义的乘方函数</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">lambda</span> x: x ** <span class="number">2</span></span><br><span class="line">print(main())</span><br><span class="line">print(main()(<span class="number">4</span>))</span><br></pre></td></tr></table></figure>
+
+<p>运行一下。哈哈，输出了:<code>16</code>。</p>
+<hr>
+ <center>٩( 'ω' )و get！</center>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/22/%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0lambda%E7%9A%84%E7%94%A8%E6%B3%95/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/21/%E5%A6%82%E4%BD%95%E5%9C%A8list%E9%A1%BA%E5%BA%8F%E4%B8%8D%E5%8F%98%E7%9A%84%E6%9D%A1%E4%BB%B6%E4%B8%8B%E6%89%A7%E8%A1%8C%E5%8E%BB%E9%87%8D%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-  	<time datetime="2020-04-21T13:50:12.075Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-21</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/21/%E5%A6%82%E4%BD%95%E5%9C%A8list%E9%A1%BA%E5%BA%8F%E4%B8%8D%E5%8F%98%E7%9A%84%E6%9D%A1%E4%BB%B6%E4%B8%8B%E6%89%A7%E8%A1%8C%E5%8E%BB%E9%87%8D%E6%93%8D%E4%BD%9C/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何在list顺序不变的条件下执行去重操作</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/21/%E5%A6%82%E4%BD%95%E5%9C%A8list%E9%A1%BA%E5%BA%8F%E4%B8%8D%E5%8F%98%E7%9A%84%E6%9D%A1%E4%BB%B6%E4%B8%8B%E6%89%A7%E8%A1%8C%E5%8E%BB%E9%87%8D%E6%93%8D%E4%BD%9C/">如何在list顺序不变的条件下执行去重操作</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/20/Python3%E4%B8%ADif%20__name__%20==%20'__main__'%E5%88%B0%E5%BA%95%E6%98%AF%E4%B8%AA%E5%95%A5%E7%8E%A9%E6%84%8F/" class="archive-article-date">
-  	<time datetime="2020-04-20T13:07:45.042Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/20/Python3%E4%B8%ADif%20__name__%20==%20'__main__'%E5%88%B0%E5%BA%95%E6%98%AF%E4%B8%AA%E5%95%A5%E7%8E%A9%E6%84%8F/">Python3中if __name__ == &#39;__main__&#39;到底是个啥玩意</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/19/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-04-19T09:27:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/19/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+  
+  
+      <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+<script>
+var gitalk = new Gitalk({
+  clientID: 'your clientID',
+  clientSecret: 'your clientSecret',
+  repo: 'git_comment',
+  owner: 'findtheonlyway',
+  admin: ['erbiduo'],
+  id: md5(window.location.pathname),
+  distractionFreeMode: true
+})
 
-    
+gitalk.render('gitalk-container')
+</script>
+  
 
 
           </div>
@@ -327,8 +413,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
