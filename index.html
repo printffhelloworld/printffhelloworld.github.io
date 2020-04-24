@@ -155,6 +155,101 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Python中arg，args,kwargs的用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/24/Python%E4%B8%ADarg%EF%BC%8Cargs,kwargs%E7%9A%84%E7%94%A8%E6%B3%95/">Python中arg，args,kwargs的用法</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/24/Python%E4%B8%ADarg%EF%BC%8Cargs,kwargs%E7%9A%84%E7%94%A8%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-04-24T13:18:05.065Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-24</time>
+</a>
+        
+    
+    
+        
+    
+    
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>定义一个main函数，形参为arg，打印arg。调用main函数，传入实参1。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(arg)</span>:</span></span><br><span class="line">    print(arg)</span><br><span class="line">main(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行一下。呦呵，输出了：<code>1</code>。</p>
+<p>此时，如果我想传入多个形参，但又不确定有几个，该咋办呢？:happy:哈哈，<code>*args</code>就可以实现。在函数头添加形参<code>*args</code>,打印args，传入几个实参2。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(arg,*args)</span>:</span></span><br><span class="line">    print(arg)</span><br><span class="line">    print(args)</span><br><span class="line">main(<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行一下。结果如下:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line">(<span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>多输出了一个元组。</p>
+<p>然后，再添加一个形参<code>**kwargs</code>，打印kwargs。传入实参Student=”学生”,Teacher=”老师”。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(arg,*args,**kwargs)</span>:</span></span><br><span class="line">    print(arg)</span><br><span class="line">    print(args)</span><br><span class="line">    print(kwargs)</span><br><span class="line">main(<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>,Student=<span class="string">"学生"</span>,Teacher=<span class="string">"老师"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行一下。结果如下:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line">(<span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line">&#123;<span class="string">'Student'</span>: <span class="string">'学生'</span>, <span class="string">'Teacher'</span>: <span class="string">'老师'</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>多输出了一个字典。</p>
+<p>加上type()查看一下输出变量类型。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(arg,*args,**kwargs)</span>:</span></span><br><span class="line">    print(type(arg))</span><br><span class="line">    print(type(args))</span><br><span class="line">    print(type(kwargs))</span><br><span class="line">main(<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>,Student=<span class="string">"学生"</span>,Teacher=<span class="string">"老师"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行一下。结果如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">int</span>'&gt;</span></span><br><span class="line"><span class="class">&lt;<span class="title">class</span> '<span class="title">tuple</span>'&gt;</span></span><br><span class="line"><span class="class">&lt;<span class="title">class</span> '<span class="title">dict</span>'&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>呦呵，python可真智能。</p>
+<p><strong>所以<code>*args</code>可以实现传入多个，但又不确定 几个的形参定义。实参传入后python将其组织成元组(tuple)。`\</strong>kwargs`可以实现传入多个，但又不确定几个的键值对定义。实参传入后python将其组织成字典(dict)。**</p>
+<hr>
+ <center>٩( 'ω' )و get！</center>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/24/Python%E4%B8%ADarg%EF%BC%8Cargs,kwargs%E7%9A%84%E7%94%A8%E6%B3%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-公告" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
