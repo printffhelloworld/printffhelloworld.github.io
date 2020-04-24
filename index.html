@@ -19,7 +19,7 @@
     <link rel="alternative" href="/atom.xml" title="Chen&#39;s blogs" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/assets/favicon.png">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -55,7 +55,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+				<li><a href="/categories">分类</a></li>
+	        
+				<li><a href="/archives">归档</a></li>
 	        
 			</ul>
 		</nav>
@@ -75,13 +77,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="/" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="mail" target="_blank" href="mailto:littlechen2020@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 			
@@ -116,29 +112,27 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="/" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="mail" target="_blank" href="mailto:littlechen2020@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories">分类</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -209,6 +203,15 @@
 <p><strong>所以<code>*args</code>可以实现传入多个，但又不确定 几个的形参定义。实参传入后python将其组织成元组(tuple)。`\</strong>kwargs`可以实现传入多个，但又不确定几个的键值对定义。实参传入后python将其组织成字典(dict)。**</p>
 <hr>
  <center>٩( 'ω' )و get！</center>
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"enable":true,"clientID":"8de4640ced2f028d2ddb","clientSecret":"568544c87515451755cba417e1492cc3fdc8cf6f","repo":"savaGitalk","owner":"printffhelloworld","admin":"printffhelloworld","distractionFreeMode":true};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
       
 
       
@@ -257,13 +260,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/23/%E5%85%AC%E5%91%8A/">公告</a>
+      <a class="article-title" href="/2020/04/23/%E5%85%AC%E5%91%8A/">公告1</a>
     </h1>
   
 
         
         <a href="/2020/04/23/%E5%85%AC%E5%91%8A/" class="archive-article-date">
-  	<time datetime="2020-04-23T13:53:13.872Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-23</time>
+  	<time datetime="2020-04-23T14:47:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-23</time>
 </a>
         
     
@@ -281,6 +284,15 @@
  <center>٩( 'ω' )و get！</center>
 
 
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"enable":true,"clientID":"8de4640ced2f028d2ddb","clientSecret":"568544c87515451755cba417e1492cc3fdc8cf6f","repo":"savaGitalk","owner":"printffhelloworld","admin":"printffhelloworld","distractionFreeMode":true};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
       
 
       
@@ -288,7 +300,37 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">公告</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">拖更</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/拖更//" class="article-tag-list-link color3">拖更</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/拖更/公告//" class="article-tag-list-link color3">公告</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
@@ -376,6 +418,15 @@
  <center>٩( 'ω' )و get！</center>
 
 
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"enable":true,"clientID":"8de4640ced2f028d2ddb","clientSecret":"568544c87515451755cba417e1492cc3fdc8cf6f","repo":"savaGitalk","owner":"printffhelloworld","admin":"printffhelloworld","distractionFreeMode":true};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
       
 
       
@@ -456,6 +507,15 @@
 <p>因为在原有列表(list)中，个元素的index值是固定值，即使转换成无序列表(set)后，各元素在原有序列表中的索引值也不会改变。因此可以使用index作为去重操作后的排序依据。</p>
 <hr>
  <center>٩( 'ω' )و get！</center>
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"enable":true,"clientID":"8de4640ced2f028d2ddb","clientSecret":"568544c87515451755cba417e1492cc3fdc8cf6f","repo":"savaGitalk","owner":"printffhelloworld","admin":"printffhelloworld","distractionFreeMode":true};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
       
 
       
@@ -533,6 +593,15 @@
 
 <h4 id="这回我们再返回去运行一下b文件。呦呵，只输出了b。舒服了。"><a href="#这回我们再返回去运行一下b文件。呦呵，只输出了b。舒服了。" class="headerlink" title="这回我们再返回去运行一下b文件。呦呵，只输出了b。舒服了。"></a>这回我们再返回去运行一下b文件。呦呵，只输出了<code>b</code>。舒服了。</h4><h4 id="五、所以，这个if什么-那么-等于-什么-39-梅因-39-可以保证脚本在以模块导入的时候，不会自动执行最外层——函数定义以外的代码。"><a href="#五、所以，这个if什么-那么-等于-什么-39-梅因-39-可以保证脚本在以模块导入的时候，不会自动执行最外层——函数定义以外的代码。" class="headerlink" title="五、所以，这个if什么 __那么__ 等于 什么&#39;__梅因__&#39;可以保证脚本在以模块导入的时候，不会自动执行最外层——函数定义以外的代码。"></a>五、所以，这个<code>if什么 __那么__ 等于 什么&#39;__梅因__&#39;</code>可以保证脚本在以模块导入的时候，不会自动执行最外层——函数定义以外的代码。</h4><hr>
  <center>٩( 'ω' )و get！</center>
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"enable":true,"clientID":"8de4640ced2f028d2ddb","clientSecret":"568544c87515451755cba417e1492cc3fdc8cf6f","repo":"savaGitalk","owner":"printffhelloworld","admin":"printffhelloworld","distractionFreeMode":true};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
       
 
       
@@ -602,6 +671,15 @@
         <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>2020年4月9日，天气晴，心情愉悦。<br>虽然今天是周日，但外面建房子的仍然在上班。大清早开始就叮叮DuangDuang吵个不停。emmm，词穷编不下去了。反正就是本来很烦，但是我建好了我的个人博客，整个人又开心了。嗯。现在还只是再本地，待会看看怎么弄到公网上然后装个逼。真实充实而美好的一天啊。END。</p>
 <h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>Nothing</p>
 
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"enable":true,"clientID":"8de4640ced2f028d2ddb","clientSecret":"568544c87515451755cba417e1492cc3fdc8cf6f","repo":"savaGitalk","owner":"printffhelloworld","admin":"printffhelloworld","distractionFreeMode":true};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
       
 
       
@@ -758,6 +836,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">公告</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">拖更</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -807,7 +893,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;还没完全弄好</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">看，这只菜鸡，哈哈</div>
   	  	
     	</section>
     

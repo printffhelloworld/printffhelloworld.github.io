@@ -23,7 +23,7 @@
     <link rel="alternative" href="/atom.xml" title="Chen&#39;s blogs" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/assets/favicon.png">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -59,7 +59,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+				<li><a href="/categories">分类</a></li>
+	        
+				<li><a href="/archives">归档</a></li>
 	        
 			</ul>
 		</nav>
@@ -79,13 +81,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="/" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="mail" target="_blank" href="mailto:littlechen2020@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 			
@@ -120,29 +116,27 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="/" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="mail" target="_blank" href="mailto:littlechen2020@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories">分类</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -197,6 +191,15 @@
 
 <h4 id="这回我们再返回去运行一下b文件。呦呵，只输出了b。舒服了。"><a href="#这回我们再返回去运行一下b文件。呦呵，只输出了b。舒服了。" class="headerlink" title="这回我们再返回去运行一下b文件。呦呵，只输出了b。舒服了。"></a>这回我们再返回去运行一下b文件。呦呵，只输出了<code>b</code>。舒服了。</h4><h4 id="五、所以，这个if什么-那么-等于-什么-39-梅因-39-可以保证脚本在以模块导入的时候，不会自动执行最外层——函数定义以外的代码。"><a href="#五、所以，这个if什么-那么-等于-什么-39-梅因-39-可以保证脚本在以模块导入的时候，不会自动执行最外层——函数定义以外的代码。" class="headerlink" title="五、所以，这个if什么 __那么__ 等于 什么&#39;__梅因__&#39;可以保证脚本在以模块导入的时候，不会自动执行最外层——函数定义以外的代码。"></a>五、所以，这个<code>if什么 __那么__ 等于 什么&#39;__梅因__&#39;</code>可以保证脚本在以模块导入的时候，不会自动执行最外层——函数定义以外的代码。</h4><hr>
  <center>٩( 'ω' )و get！</center>
+<div id="gitalk-container"></div>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+		<script>
+		var gitalkConfig = {"enable":true,"clientID":"8de4640ced2f028d2ddb","clientSecret":"568544c87515451755cba417e1492cc3fdc8cf6f","repo":"savaGitalk","owner":"printffhelloworld","admin":"printffhelloworld","distractionFreeMode":true};
+	    gitalkConfig.id = md5(location.pathname);
+		var gitalk = new Gitalk(gitalkConfig);
+	    gitalk.render("gitalk-container");
+	    </script>
       
 
       
@@ -212,6 +215,16 @@
                   <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
                     
                   </div>
                 </span>
@@ -334,7 +347,7 @@
   
 
   
-  
+
       <div id="gitalk-container"></div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
@@ -342,11 +355,11 @@
 
 <script>
 var gitalk = new Gitalk({
-  clientID: 'your clientID',
-  clientSecret: 'your clientSecret',
-  repo: 'git_comment',
-  owner: 'findtheonlyway',
-  admin: ['erbiduo'],
+  clientID: '8de4640ced2f028d2ddb',
+  clientSecret: '568544c87515451755cba417e1492cc3fdc8cf6f',
+  repo: 'savaGitalk',
+  owner: 'printffhelloworld',
+  admin: ['printffhelloworld'],
   id: md5(window.location.pathname),
   distractionFreeMode: true
 })
@@ -468,6 +481,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">公告</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">拖更</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -517,7 +538,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;还没完全弄好</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">看，这只菜鸡，哈哈</div>
   	  	
     	</section>
     
