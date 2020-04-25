@@ -149,6 +149,97 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python变量间的相互引用与赋值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/25/python%E5%8F%98%E9%87%8F%E9%97%B4%E7%9A%84%E7%9B%B8%E4%BA%92%E5%BC%95%E7%94%A8%E4%B8%8E%E8%B5%8B%E5%80%BC/">python变量间的相互引用与赋值</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/25/python%E5%8F%98%E9%87%8F%E9%97%B4%E7%9A%84%E7%9B%B8%E4%BA%92%E5%BC%95%E7%94%A8%E4%B8%8E%E8%B5%8B%E5%80%BC/" class="archive-article-date">
+  	<time datetime="2020-04-25T11:28:03.834Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-25</time>
+</a>
+        
+    
+    
+        
+    
+    
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>看一段代码:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#直接引用</span></span><br><span class="line">a= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">b=a</span><br><span class="line">print(<span class="string">"变量a所在内存地址为:"</span>+str(id(a))+<span class="string">"-值为:"</span>+str(a))</span><br><span class="line">print(<span class="string">"变量b所在内存地址为:"</span>+str(id(b))+<span class="string">"-值为:"</span>+str(b))</span><br></pre></td></tr></table></figure>
+
+<p>运行一下。结果为:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">变量a所在内存地址为:3029425873544-值为:[1, 2, 3]</span><br><span class="line">变量b所在内存地址为:3029425873544-值为:[1, 2, 3]</span><br></pre></td></tr></table></figure>
+
+<p>可以发现a与b的地址和值都相同，说明b只是a的一个引用。现在我们把a的值改成[4,5,6];再打印：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#直接引用</span></span><br><span class="line">a= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">b=a</span><br><span class="line">print(<span class="string">"变量a所在内存地址为:"</span>+str(id(a))+<span class="string">"-值为:"</span>+str(a))</span><br><span class="line">print(<span class="string">"变量b所在内存地址为:"</span>+str(id(b))+<span class="string">"-值为:"</span>+str(b))</span><br><span class="line">a=[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">print(<span class="string">"变量a所在内存地址为:"</span>+str(id(a))+<span class="string">"-值为:"</span>+str(a))</span><br><span class="line">print(<span class="string">"变量b所在内存地址为:"</span>+str(id(b))+<span class="string">"-值为:"</span>+str(b))</span><br></pre></td></tr></table></figure>
+
+<p>运行一下。结果为:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">变量a所在内存地址为:<span class="number">2021308457608</span>-值为:[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">变量b所在内存地址为:<span class="number">2021308457608</span>-值为:[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">变量a所在内存地址为:<span class="number">2021308457672</span>-值为:[<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">变量b所在内存地址为:<span class="number">2021308457608</span>-值为:[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+
+<p>变量a指向了新的地址和值，而变量b还是指向原来的。</p>
+<p>现在，我们改用索引的方式对a进行重新赋值，再打印:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#直接引用</span></span><br><span class="line">a= [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">b=a</span><br><span class="line">print(<span class="string">"变量a所在内存地址为:"</span>+str(id(a))+<span class="string">"-值为:"</span>+str(a))</span><br><span class="line">print(<span class="string">"变量b所在内存地址为:"</span>+str(id(b))+<span class="string">"-值为:"</span>+str(b))</span><br><span class="line">a[<span class="number">0</span>]=<span class="number">4</span></span><br><span class="line">a[<span class="number">1</span>]=<span class="number">5</span></span><br><span class="line">a[<span class="number">2</span>]=<span class="number">6</span></span><br><span class="line">print(<span class="string">"变量a所在内存地址为:"</span>+str(id(a))+<span class="string">"-值为:"</span>+str(a))</span><br><span class="line">print(<span class="string">"变量b所在内存地址为:"</span>+str(id(b))+<span class="string">"-值为:"</span>+str(b))</span><br></pre></td></tr></table></figure>
+
+<p>运行一下。结果如下:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">变量a所在内存地址为:<span class="number">1457487569544</span>-值为:[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">变量b所在内存地址为:<span class="number">1457487569544</span>-值为:[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">变量a所在内存地址为:<span class="number">1457487569544</span>-值为:[<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">变量b所在内存地址为:<span class="number">1457487569544</span>-值为:[<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br></pre></td></tr></table></figure>
+
+<p>发现两个变量依旧指向原来的内存区域,但是值都更新为了[4,5,6]。这也是为什么有时候变量会无故变混乱的原因。</p>
+<hr>
+ <center>٩( 'ω' )و get！</center>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/25/python%E5%8F%98%E9%87%8F%E9%97%B4%E7%9A%84%E7%9B%B8%E4%BA%92%E5%BC%95%E7%94%A8%E4%B8%8E%E8%B5%8B%E5%80%BC/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Python中arg，args,kwargs的用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
